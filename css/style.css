@@ -4,13 +4,13 @@
     padding: 0;
     margin: 0;
     box-sizing: content-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
     width: 100%;
     height: auto;
     background: var(--color-body);
-    font-family: 'Poppins', sans-serif;
 }
 
 header{
@@ -29,7 +29,7 @@ header{
 
 .foods h3{
     color: var(--color-first);
-    font-size: x-large;
+    font-size: 3rem;
 }
 
 .opciones{
@@ -44,6 +44,7 @@ header{
 .opciones a{
     text-decoration: none;
     color: var(--color-second);
+    font-size: 1.8rem;
 }
 
 /* *************************************************** */
@@ -66,26 +67,36 @@ main{
     width: 100%;
     height: 93vh;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    left: 18%;
 }
 
 .texto__pagina1 h3{
     color: var(--color-first);
-    font-size: 5rem
+    font-size: 8rem
 }
 
 .texto__pagina1 p{
     color: var(--color-second);
-    font-size: 1.5rem;
+    font-size: 2.8rem;
 }
 
 .texto__pagina1 button{
     color: var(--color-second);
     background: var(--color-first);
     font-size: large;
-    padding: 6px;
-    width: 25%;
+    padding: 10px;
+    width: 20%;
     border: none;
+    position: relative;
+    top: 2%;
+}
+
+.texto__pagina1 button:hover{
+    background: var(--color-fifth);
+    cursor: pointer;
+    color: var(--color-four);
+    transition: 0.2s;
 }
 
 .imagen__pagina1{
@@ -107,7 +118,8 @@ main{
 .pagina__2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 90vh;
+    height: 100vh;
+    justify-items: center;
 }
 
 .imagen__pagina2{
@@ -120,18 +132,20 @@ main{
 }
 
 .imagen__pagina2 img{
-    width: 50%;
-    height: 50%;
+    width: 40rem;
+    height: 40rem;
+    position: relative;
+    left: 10%;
 }
 
 .texto__pagina2{
     display: flex;
-    width: 50%;
+    width: 90%;
     height: 100%;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
 }
 
 .content__pagina2{
@@ -141,7 +155,7 @@ main{
 
 .texto__pagina2 h5{
     color: var(--color-first);
-    font-size: 15px;
+    font-size: 2.5rem;
 }
 
 .texto__pagina2 .p__uno, .texto__pagina2 .p__dos{
@@ -149,18 +163,31 @@ main{
 }
 
 .texto__pagina2 .p__uno{
-    font-size: 40px;
+    font-size: 3.5rem;
+    width: 40rem;
+}
+
+.texto__pagina2 .p__dos{
+    width: 30rem;
 }
 
 .texto__pagina2 button{
     color: var(--color-second);
     background: var(--color-first);
-    width: 30%;
+    width: 20%;
     padding: 6px;
-    font-size: large;
+    font-size: 1.5rem;
     border: none;
+    position: relative;
+    top: 1.5rem;
 }
 
+.texto__pagina2 button:hover{
+    background: var(--color-fifth);
+    cursor: pointer;
+    color: var(--color-four);
+    transition: 0.2s;
+}
 /* ************************************** */
 
 .pagina__3{
@@ -174,7 +201,6 @@ main{
     width: 99%;
     height: 100%;
     flex-direction: column;
-    border: 1px solid red;
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -182,17 +208,18 @@ main{
 
 .title__pagina3 h4{
     color: var(--color-first);
+    font-size: 2.5rem;
 }
 
 .subtitle__pagina3 p{
     color: var(--color-second);
-    font-size: xx-large;
+    font-size: 4rem;
 }
 
 .contenido__pagina3{
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 35px;
 }
 
 .caja1__pagina3, .caja2__pagina3, .caja3__pagina3{
@@ -200,13 +227,37 @@ main{
     /* box-shadow: 1px solid black; */
 }
 
+.caja1__pagina3 img, 
+.caja2__pagina3 img,
+.caja3__pagina3 img{
+    padding: 30px;
+}
+
 .texto__pagina3{
     color: var(--color-second);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     color: var(--color-four);
+    position: relative;
+    bottom: 5%;
+    font-size: 1.8rem;
+}
+
+.caja1__pagina3:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+.caja2__pagina3:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+.caja3__pagina3:hover{
+    scale: 1.1;
+    transition: 0.2s;
 }
 
 #valor__pagina3{
@@ -216,31 +267,40 @@ main{
 /* ************************************** */
 @media (width < 800px){
 
+    /* *************************************** */
+
     .pagina__1{
         display: flex;
-        width: 100%;
-        height: 85vh;
-        gap: 10%;
+        width: 90%;
+        height: 100vh;
+        gap: 40px;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .texto__pagina1{
         display: flex;
         width: 100%;
-        height: 40%;
-        justify-content: flex-end;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 5%;
     }
 
-    .content__pagina1{
-        text-align: center;
+    .texto__pagina1 h3{
+        font-size: 2.5rem;
     }
 
-    .content__pagina1 h3{
-        font-size: 30px;
+    .texto__pagina1 p{
+        font-size: 2rem;
     }
 
-    .content__pagina1 button{
+    .texto__pagina1 button{
         width: 40%;
+        text-align: center;
+
     }
 
     .imagen__pagina1{
@@ -248,6 +308,12 @@ main{
         height: 100%;
         position: relative;
         bottom: 10%;
+        left: 5%;
+    }
+
+    .imagen__pagina1 img{
+        width: 100%;
+        height: 100%;
     }
 
     /* *********************************** */
@@ -256,8 +322,51 @@ main{
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
+        height: 100%;
+        gap: 50px;
     }
 
+    .texto__pagina2{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .imagen__pagina2{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .imagen__pagina2 img{
+        width: 90%;
+        height: 80%;
+        position: relative;
+        left: -5px;
+    }
+
+    .texto__pagina2 h5{
+        width: 60%;
+        font-size: 2rem;
+    }
+
+    .texto__pagina2 .p__uno{
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .texto__pagina2 .p__dos{
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    
+
+    .texto__pagina2 button{
+        width: 40%;
+    }
+
+    /* ************************************* */
     .contenido__pagina3{
         flex-wrap: wrap;
     }
