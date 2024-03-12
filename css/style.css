@@ -7,11 +7,14 @@
 }
 
 body{
+    width: 100%;
+    height: auto;
     background: var(--color-body);
     font-family: 'Poppins', sans-serif;
 }
 
 header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -82,6 +85,7 @@ main{
     font-size: large;
     padding: 6px;
     width: 25%;
+    border: none;
 }
 
 .imagen__pagina1{
@@ -93,6 +97,7 @@ main{
 }
 
 .imagen__pagina1 img{
+    object-fit: contain;
     width: 70%;
     height: 70%;
 }
@@ -103,16 +108,20 @@ main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 90vh;
-    border: 1px solid green;
 }
 
 .imagen__pagina2{
     display: flex;
-    width: 65%;
-    height: 65%;
+    width: 100%;
+    height: 100%;
     justify-content: center;
+    align-items: center;
     object-fit: contain;
-    border: 1px solid red;
+}
+
+.imagen__pagina2 img{
+    width: 50%;
+    height: 50%;
 }
 
 .texto__pagina2{
@@ -149,4 +158,107 @@ main{
     width: 30%;
     padding: 6px;
     font-size: large;
+    border: none;
+}
+
+/* ************************************** */
+
+.pagina__3{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.container__pagina3{
+    display: flex;
+    width: 99%;
+    height: 100%;
+    flex-direction: column;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.title__pagina3 h4{
+    color: var(--color-first);
+}
+
+.subtitle__pagina3 p{
+    color: var(--color-second);
+    font-size: xx-large;
+}
+
+.contenido__pagina3{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.caja1__pagina3, .caja2__pagina3, .caja3__pagina3{
+    background: var(--color-fifth);
+    /* box-shadow: 1px solid black; */
+}
+
+.texto__pagina3{
+    color: var(--color-second);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-four);
+}
+
+#valor__pagina3{
+    color: var(--color-first);
+}
+
+/* ************************************** */
+@media (width < 800px){
+
+    .pagina__1{
+        display: flex;
+        width: 100%;
+        height: 85vh;
+        gap: 10%;
+        flex-direction: column;
+    }
+
+    .texto__pagina1{
+        display: flex;
+        width: 100%;
+        height: 40%;
+        justify-content: flex-end;
+    }
+
+    .content__pagina1{
+        text-align: center;
+    }
+
+    .content__pagina1 h3{
+        font-size: 30px;
+    }
+
+    .content__pagina1 button{
+        width: 40%;
+    }
+
+    .imagen__pagina1{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        bottom: 10%;
+    }
+
+    /* *********************************** */
+
+    .pagina__2{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .contenido__pagina3{
+        flex-wrap: wrap;
+    }
 }
