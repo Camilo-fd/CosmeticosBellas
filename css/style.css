@@ -8,8 +8,8 @@
 }
 
 body{
-    width: 100%;
-    height: auto;
+   
+    
     background: var(--color-body);
 }
 
@@ -58,6 +58,7 @@ header{
 main{
     height: 100%;
     width: 100%;
+    /* overflow: hidden; */
 }
 
 .pagina__1{
@@ -428,10 +429,19 @@ main{
 
 .pagina__6{
     display: grid;
-    grid-template-columns: repeat(4, 18%);
+    grid-template-columns: 1fr;
     justify-items: center;
     position: relative;
-    left: 15%;
+    /* left: 15%; */
+    
+}
+
+.container__pagina6{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    gap: 7%;
 }
 
 .caja1__pagina6,
