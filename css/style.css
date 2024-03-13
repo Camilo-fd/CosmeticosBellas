@@ -17,6 +17,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 10px 0;
 }
 
 .foods{
@@ -68,12 +69,13 @@ main{
     height: 93vh;
     justify-content: center;
     position: relative;
-    left: 18%;
+    left: 15%;
+    bottom: 10%;
 }
 
 .texto__pagina1 h3{
     color: var(--color-first);
-    font-size: 8rem
+    font-size: 7rem
 }
 
 .texto__pagina1 p{
@@ -105,6 +107,8 @@ main{
     align-items: center;
     width: 90%;
     height: 100%;
+    position: relative;
+    bottom: 10%;
 }
 
 .imagen__pagina1 img{
@@ -120,6 +124,7 @@ main{
     grid-template-columns: repeat(2, 1fr);
     height: 100vh;
     justify-items: center;
+    gap: 80px;
 }
 
 .imagen__pagina2{
@@ -174,7 +179,7 @@ main{
 .texto__pagina2 button{
     color: var(--color-second);
     background: var(--color-first);
-    width: 20%;
+    width: 25%;
     padding: 6px;
     font-size: 1.5rem;
     border: none;
@@ -193,7 +198,8 @@ main{
 .pagina__3{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    height: 100vh;
 }
 
 .container__pagina3{
@@ -204,6 +210,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: 15px;
+    padding: 20px 0;
 }
 
 .title__pagina3 h4{
@@ -262,6 +269,135 @@ main{
 
 #valor__pagina3{
     color: var(--color-first);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* **************************************** */
+
+.pagina__4{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10%;
+    gap: 5%;
+}
+
+.texto__pagina4{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto__pagina4 h5{
+    color: var(--color-first);
+    font-size: 1.5rem;
+    line-height: 80px;
+}
+
+.texto__pagina4 p{
+    color: var(--color-second);
+    font-size: 2.5rem;
+}
+
+.contenido__pagina4{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 5%;
+}
+
+.caja1__pagina4,
+.caja2__pagina4,
+.caja3__pagina4{
+    display: flex;
+    width: 80%;
+    height: 98%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 6%;
+}
+
+.caja1__pagina4 img,
+.caja2__pagina4 img,
+.caja3__pagina4 img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.caja1__pagina4 h5,
+.caja2__pagina4 h5,
+.caja3__pagina4 h5{
+    color: var(--color-first);
+    font-size: 2rem;
+}
+
+.caja1__pagina4 p,
+.caja2__pagina4 p,
+.caja3__pagina4 p{
+    color: var(--color-second);
+    font-size: 1.3rem;
+    text-align: center;
+    width: 90%;
+}
+
+.contenido__pagina4 .caja1__pagina4:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+.contenido__pagina4 .caja2__pagina4:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+.contenido__pagina4 .caja3__pagina4:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+/* ******************************************* */
+
+.pagina__5{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.contenido__pagina5{
+    display: flex;
+    width: 84%;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-fifth);
+}
+
+.contenido__pagina5 p{
+    font-size: 2.8rem;
+    width: 40%;
+    text-align: center;
+}
+
+.contenido__pagina5 button{
+    width: 15%;
+    padding-block: 10px;
+    margin-top: 20px;
+    background: var(--color-first);
+    color: var(--color-second);
+    border: none;
+    font-size: 1.3rem;
+
 }
 
 /* ************************************** */
@@ -287,6 +423,7 @@ main{
         align-items: center;
         position: relative;
         left: 5%;
+        top: 2%;
     }
 
     .texto__pagina1 h3{
@@ -304,11 +441,11 @@ main{
     }
 
     .imagen__pagina1{
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         position: relative;
         bottom: 10%;
-        left: 5%;
+        left: 10%;
     }
 
     .imagen__pagina1 img{
@@ -323,6 +460,7 @@ main{
         flex-direction: column-reverse;
         width: 100%;
         height: 100%;
+        padding: 20px;
         gap: 50px;
     }
 
@@ -331,6 +469,8 @@ main{
         align-items: center;
         text-align: center;
         gap: 30px;
+        position: relative;
+        left: -5%;
     }
 
     .imagen__pagina2{
@@ -367,7 +507,29 @@ main{
     }
 
     /* ************************************* */
+
+    .title__pagina3 h4{
+        font-size: 1.5rem;
+    }
+
+    .subtitle__pagina3 p{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
     .contenido__pagina3{
         flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* ****************************************** */
+
+    .pagina__4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
