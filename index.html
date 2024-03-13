@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="foods">
+        <!-- <div class="foods">
             <h3>Foods</h3>
         </div>
         <div class="opciones">
@@ -18,7 +18,22 @@
             <a href="#Menu">Menu</a>
             <a href="#Servicies">Service</a>
             <a href="#Contact">Contact</a>
-        </div>
+        </div> -->
+        <nav class="encabezado_1">
+            <h3 class="titulo_1">Foods</h3>
+            <ul class="menu">
+                <input type="checkbox" id="check">
+                <span class="menus">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Menu">Menu</a></li>
+                    <li><a href="#Service">Service</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <label for="check" class="close-menu"><i class='bx bx-menu-alt-right'></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class='bx bx-menu' style='color:#fdf8f8'  ></i></label>
+            </ul>
+        </nav>
     </header>
     <main>
         <article class="pagina__1" id="Home">
@@ -84,7 +99,7 @@
                 </div>
             </div>
         </article>
-        <article class="pagina__4" id="Servicies">
+        <article class="pagina__4" id="Service">
             <div class="texto__pagina4">
                 <h5>Servicies</h5>
                 <p>We provide best food servicies</p>

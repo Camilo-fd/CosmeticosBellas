@@ -13,7 +13,7 @@ body{
     background: var(--color-body);
 }
 
-header{
+/* header{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -51,6 +51,66 @@ header{
     text-decoration: none;
     color: var(--color-second);
     font-size: 1.8rem;
+} */
+
+.encabezado_1{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+
+}
+.menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.menus{
+    display: flex;
+    width: 80%;
+    list-style: none;
+    justify-content: space-around;
+    gap: 15px;
+    color: var(--color-second);
+}
+.menus a{
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+.menus a:hover{
+    transition: 0.3s ease;
+    color: #ff702a;
+}
+.menus li:hover{
+    color: red;
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+.titulo_1{
+    color: var(--color-first);
+    width: 50%;
+    padding-left: 3%;
+    font-style: none;
+    font-size: 2.5rem;
+}
+.open-menu{
+    top: 10px;
+    right: 10px;
+    display: none;
+    position: absolute;
+}
+.close-menu{
+    top: 1.25rem;
+    right: 1.25rem;
+    display: none;
+    position: absolute;
+}
+#check{
+    display: none;
 }
 
 /* *************************************************** */
@@ -433,7 +493,7 @@ main{
     justify-items: center;
     position: relative;
     /* left: 15%; */
-    
+
 }
 
 .container__pagina6{
@@ -513,6 +573,37 @@ main{
 /* ************************************** */
 @media (width < 800px){
 
+    .menus{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50vh;
+        position: fixed;
+        gap: 3%;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color-mobile);
+        transition:  0.2s ease;
+    }
+    .open-menu, .close-menu{
+        display: block;
+    }
+    #check:checked~.menus{
+        right: 0;
+    }
+
+    .close-menu i{
+        font-size: 2rem;
+        color: var(--color-four);
+    }
+
+    .open-menu i{
+        font-size: 2rem;
+        position: relative;
+        top: 1rem;
+    }
 
 
     /* *************************************** */
@@ -638,6 +729,7 @@ main{
         justify-content: center;
         width: 100%;
         height: 100%;
+        padding-top: 15%;
     }
 
     .title__pagina3 h4{
@@ -663,7 +755,7 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
+        gap: 2rem;
     }
 
     .contenido__pagina4{
@@ -671,7 +763,7 @@ main{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 60px;
+        gap: 6rem;
     }
 
     .texto__pagina4 p{
@@ -714,17 +806,25 @@ main{
 
     .pagina__6{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        justify-items: baseline;
+        /* grid-template-rows: repeat(2, 1fr); */
+        justify-items: center;
         left: 0;
+        padding-top: 20%;
+    }
+
+    .container__pagina6{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
     }
 
     .caja1__pagina6,
     .caja2__pagina6,
     .caja3__pagina6,
     .caja4__pagina6{
-        position: relative;
-        left: 16%;
+        padding: 5%;
     }
 
     .caja1__pagina6,
