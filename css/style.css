@@ -23,7 +23,6 @@ header{
 .foods{
     display: flex;
     width: 20%;
-    /* border: solid blue; */
     align-items: center;
     justify-content: center;
 }
@@ -36,10 +35,16 @@ header{
 .opciones{
     display: flex;
     width: 30%;
-    /* border: solid red; */
     justify-content: flex-end;
+    position: relative;
+    left: -4%;
     padding: 15px 10px;
     gap: 40px;
+}
+
+.opciones a:hover{
+    color: var(--color-first);
+    transition: 0.2s;
 }
 
 .opciones a{
@@ -108,7 +113,7 @@ main{
     width: 90%;
     height: 100%;
     position: relative;
-    bottom: 10%;
+    bottom: 0%;
 }
 
 .imagen__pagina1 img{
@@ -305,7 +310,7 @@ main{
 
 .texto__pagina4 h5{
     color: var(--color-first);
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     line-height: 80px;
 }
 
@@ -423,8 +428,10 @@ main{
 
 .pagina__6{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 18%);
     justify-items: center;
+    position: relative;
+    left: 15%;
 }
 
 .caja1__pagina6,
@@ -446,7 +453,7 @@ main{
     font-size: 1.4rem;
 }
 
-.caja1__pagina6{
+/* .caja1__pagina6{
     position: relative;
     left: 40%;
 }
@@ -459,7 +466,7 @@ main{
 .caja4__pagina6{
     position: relative;
     right: 30%;
-}
+} */
 
 .caja1__pagina6 h5,
 .caja2__pagina6 h5,
@@ -487,6 +494,12 @@ main{
     font-size: 20px;
     cursor: pointer;
 }
+
+/* .icon #uno:hover{
+    scale: 1.5s;
+    transition: 1.2s;
+} */
+
 /* ************************************** */
 @media (width < 800px){
 
@@ -516,11 +529,11 @@ main{
     }
 
     .texto__pagina1 h3{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .texto__pagina1 p{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .texto__pagina1 button{
@@ -548,8 +561,8 @@ main{
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
-        height: 100%;
-        padding: 20px;
+        height: 100vh;
+        padding: 20px 0;
         gap: 50px;
     }
 
@@ -565,7 +578,6 @@ main{
     .imagen__pagina2{
         width: 100%;
         height: 100%;
-        position: relative;
     }
 
     .imagen__pagina2 img{
@@ -578,24 +590,45 @@ main{
     .texto__pagina2 h5{
         width: 60%;
         font-size: 2rem;
+        position: relative;
+        left: 5%;
     }
 
     .texto__pagina2 .p__uno{
         font-size: 2.5rem;
         width: 100%;
+        position: relative;
+        left: 5%;
     }
 
     .texto__pagina2 .p__dos{
         width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        position: relative;
+        left: 5%;
     }
     
 
     .texto__pagina2 button{
         width: 40%;
+        position: relative;
+        left: 5%;
     }
 
     /* ************************************* */
+
+    .pagina__3{
+        display: flex;
+        height: 100%;
+        padding: 5%;
+    }
+    
+    .contenido__pagina3{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
 
     .title__pagina3 h4{
         font-size: 1.5rem;
@@ -606,16 +639,11 @@ main{
         text-align: center;
     }
 
-    .contenido__pagina3{
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    .pagina__3{
-        display: flex;
-        height: 100%;
+    .caja1__pagina3 i,
+    .caja2__pagina3 i,
+    .caja3__pagina3 i{
+    position: relative;
+    bottom: -1rem;
     }
 
     /* ****************************************** */
@@ -625,7 +653,7 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: solid red;
+        gap: 40px;
     }
 
     .contenido__pagina4{
@@ -633,5 +661,77 @@ main{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 60px;
+    }
+
+    .texto__pagina4 p{
+        text-align: center;
+    }
+
+    .caja1__pagina4 p,
+    .caja2__pagina4 p,
+    .caja3__pagina4 p{
+        width: 100vw;
+        font-size: 1.6rem;
+    }
+
+    /* *************************************** */
+
+    .pagina__5{
+        margin: 12%;
+    }
+
+    .contenido__pagina5{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .contenido__pagina5 p{
+        width: 100%;
+        font-size: 1.7rem;
+        align-items: center;
+    }
+
+    .contenido__pagina5 button{
+        width: 39%;
+        font-size: 1rem;
+    }
+
+    /* ************************************************ */
+
+    .pagina__6{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: baseline;
+        left: 0;
+    }
+
+    .caja1__pagina6,
+    .caja2__pagina6,
+    .caja3__pagina6,
+    .caja4__pagina6{
+        position: relative;
+        left: 16%;
+    }
+
+    .caja1__pagina6,
+    .caja2__pagina6,
+    .caja3__pagina6,
+    .caja4__pagina6{
+        font-size: 1.5rem;
+    }
+
+    .caja1__pagina6 h5,
+    .caja2__pagina6 h5,
+    .caja3__pagina6 h5,
+    .caja4__pagina6 h5{
+        font-size: 1.8rem;
+    }
+
+    .icon i{
+        font-size: 1.4rem;
     }
 }
