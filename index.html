@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script type="module" src="./script.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,15 +21,15 @@
             <a href="#Contact">Contact</a>
         </div> -->
         <nav class="encabezado_1">
-            <h3 class="titulo_1">Foods</h3>
+            <h3 class="titulo_1">Cosméticos Bellas</h3>
             <ul class="menu">
                 <input type="checkbox" id="check">
                 <span class="menus">
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Menu">Menu</a></li>
-                    <li><a href="#Service">Service</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#Home">Inicio</a></li>
+                    <!-- <li><a href="#About">About</a></li> -->
+                    <li><a href="#Menu">Productos</a></li>
+                    <!-- <li><a href="#Service">Service</a></li> -->
+                    <li><a href="#Contact">Contacto</a></li>
                     <label for="check" class="close-menu"><i class='bx bx-menu-alt-right'></i></label>
                 </span>
                 <label for="check" class="open-menu"><i class='bx bx-menu' style='color:#fdf8f8'  ></i></label>
@@ -38,134 +39,127 @@
     <main>
         <article class="pagina__1" id="Home">
             <div class="texto__pagina1">
-                    <h3>Full Website</h3>
-                    <p>Foods the</p>
-                    <p>Most precious thing</p>
-                    <button>Today's Menu</button>
+                    <h3>Descubre tu belleza auténtica</h3>
+                    <p>cosméticos que realzan</p>
+                    <p>lo mejor de ti.💄</p>
+                    <button><a href="#Menu">Nuestros productos</a></button>
             </div>
             <div class="imagen__pagina1">
-                <img src="storage/img/home.png" alt="">
+                <img src="storage/ImageLogo.png" alt="">
             </div>
         </article>
         <article class="pagina__2" id="About">
             <div class="imagen__pagina2">
-                <img src="storage/img/about.png" alt="">
+                <img src="storage/ImagenLocal2.jpeg" alt="">
             </div>
             <div class="texto__pagina2">
-                <h5>About Us</h5>
-                <p class="p__uno">We speak the good food language</p>
-                <p class="p__dos">It is a long established fact that a 
-                    be distracted by the readable content 
-                    looking at its layout. The point of</p>
-                <button>Learn More</button>
+                <h5>Acerca de nosotras</h5>
+                <!-- <p class="p__uno">We speak the good food language</p> -->
+                <p class="p__dos">Somos una tienda de cosméticos que combina innovación
+                    y calidad para ayudarte a sentirte hermosa y segura.
+                </p>
+                <button><a href="#Contact">Contáctanos</a></button>
             </div>
         </article>
         <article class="pagina__3" id="Menu">
             <div class="container__pagina3">
                 <div class="title__pagina3">
-                    <h4>Food Menu</h4>
+                    <h4>Nuestros productos</h4>
                 </div>
-                <div class="subtitle__pagina3">
-                    <p>Fresh taste and grat price</p>
-                </div>
-                <div class="contenido__pagina3">
+                <!-- <div class="subtitle__pagina3">
+                    <p>Fresh taste and great price</p>
+                </div> -->
+                <div class="contenido__pagina3" id="productos-container">
+                    <!-- Productos iniciales -->
                     <div class="caja1__pagina3">
-                        <i class='bx bx-cart' ></i>
-                        <img src="storage/img/food1.png" alt="">
+                        <div class="imagenProducto"><img src="storage/ImagenBrillo.jpeg" alt=""></div>
                         <div class="texto__pagina3">
-                            <p>Chicken Burger</p>
-                            <p>Tasty Food</p>
-                            <p id="valor__pagina3">$11.00</p>
+                            <p>Fruit Gloss</p>
+                            <!-- <p>Gloss</p> -->
+                            <p id="valor__pagina3">$12.000 c/u</p>
                         </div>
                     </div>
-                    <div class="caja2__pagina3">
-                        <i class='bx bx-cart' ></i>
-                        <img src="storage/img/food2.png" alt="">
+                    <div class="caja1__pagina3">
+                        <div class="imagenProducto"><img src="storage/ImagenCremaCapilar.jpeg" alt=""></div>
                         <div class="texto__pagina3">
-                            <p>Special Beef Burger</p>
-                            <p>Tasty Food</p>
-                            <p id="valor__pagina3">$11.00</p>
+                            <p>Lissia</p>
+                            <p>Ácido hialurónico</p>
+                            <p id="valor__pagina3">$18.000 c/u</p>
                         </div>
                     </div>
-                    <div class="caja3__pagina3">
-                        <i class='bx bx-cart' ></i>
-                        <img src="storage/img/food3.png" alt="">
+                    <div class="caja1__pagina3">
+                        <div class="imagenProducto"><img src="storage/ImagenLapizOjos.jpeg" alt=""></div>
                         <div class="texto__pagina3">
-                            <p>Chicken Fry Pack</p>
-                            <p>Tasty Food</p>
-                            <p id="valor__pagina3">$11.00</p>
+                            <p>Tinta</p>
+                            <p>Pink magic</p>
+                            <p id="valor__pagina3">$6.500 c/u</p>
                         </div>
                     </div>
                 </div>
+                <!-- Botón para mostrar más productos -->
+                <button id="mostrar-productos" class="mostrar-productos">Ver todos los productos</button>
             </div>
         </article>
         <article class="pagina__4" id="Service">
             <div class="texto__pagina4">
-                <h5>Servicies</h5>
-                <p>We provide best food servicies</p>
+                <h5>Categorías</h5>
+                <!-- <p>We provide best food servicies</p> -->
             </div>
             <div class="contenido__pagina4">
                 <div class="caja1__pagina4">
-                    <img src="storage/img/s1.png" alt="">
-                    <h5>Order</h5>
-                    <p>It is a long established be distracted
-                        by the readable looking at its layout
-                    </p>
+                    <img src="storage/ImagenCara.jpeg" alt="">
+                    <h5>Rostro</h5>
+                    <p>Transforma tu rostro, transforma tu vida</p>
                 </div>
                 <div class="caja2__pagina4">
-                    <img src="storage/img/s2.png" alt="">
-                    <h5>Shipping</h5>
-                    <p>It is a long established be distracted
-                        by the readable looking at its layout
-                    </p>
+                    <img src="storage/ImagenCapilar.jpeg" alt="">
+                    <h5>Cuidado Capilar</h5>
+                    <p>Un cabello hermoso es un reflejo de tu personalidad</p>
                 </div>
                 <div class="caja3__pagina4">
-                    <img src="storage/img/s3.png" alt="">
-                    <h5>Dellvered</h5>
-                    <p>It is a long established be distracted
-                        by the readable looking at its layout
-                    </p>
+                    <img src="storage/ImagenEsmaltes.jpeg" alt="">
+                    <h5>Esmaltes</h5>
+                    <p>Transforma tus uñas, transforma tu estilo</p>
                 </div>
             </div>
         </article>
         <article class="pagina__5">
             <div class="contenido__pagina5">
-                <p>We make quality food Everyday</p>
-                <button>Learn More</button>
+                <button>Nuestra Ubicación</button>
+                <iframe class="mapaGoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9837203022603!2d-73.12623508981129!3d7.127879092846293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e68157b36c28d4d%3A0x44bad48edebe3baa!2sCl.%2021%20%2321-70%2C%20Comuna%204%20Occidental%2C%20Bucaramanga%2C%20Santander!5e0!3m2!1ses!2sco!4v1731522162956!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </article>
         <article class="pagina__6">
             <div class="container__pagina6">
                 <div class="caja1__pagina6">
-                    <h5>Menu Links</h5>
-                    <p>Home</p>
-                    <p>About</p>
-                    <p>Menu</p>
-                    <p>Servicie</p>
-                    <p>Contact</p>
+                    <h5>Nuestras marcas</h5>
+                    <p>Vogue</p>
+                    <p>Ame</p>
+                    <p>Raquel</p>
+                    <p>Samy</p>
+                    <p>Skala</p>
                 </div>
-                <div class="caja2__pagina6">
+                <!-- <div class="caja2__pagina6">
                     <h5>Our Servive</h5>
                     <p>Web Design</p>
                     <p>Web Development</p>
                     <p>Marketing</p>
                     <p>Product Management</p>
                     <p>Graphic Design</p>
-                </div>
+                </div> -->
                 <div class="caja3__pagina6">
-                    <h5>Information</h5>
-                    <p>About Us</p>
-                    <p>Delivery Information</p>
-                    <p>Privacy Policy</p>
-                    <p>Terms & Conditions</p>
+                    <h5>Horario de atención</h5>
+                    <!-- <p>Horario de atencion:</p> -->
+                    <p>Lunes a viernes 9:00am - 6:30pm</p>
+                    <p>Sabados y domingos 9:00am - 1:00pm</p>
+                    <!-- <p>Terms & Conditions</p> -->
                 </div>
                 <div class="caja4__pagina6" id="Contact">
-                    <h5>Contact Us</h5>
+                    <h5>Nuestras Redes</h5>
                     <div class="icon">
-                        <i id="uno" class='bx bxl-whatsapp'></i>
-                        <i id="dos" class='bx bxl-facebook-circle' ></i>
-                        <i id="tres" class='bx bxl-twitter' ></i>
-                        <i id="cuatro" class='bx bxl-instagram' ></i>
+                        <a href="https://wa.me/573161187221" target="_blank"><i id="uno" class='bx bxl-whatsapp'></i></a>
+                        <a href="https://www.facebook.com/share/MrChsPpf1oShKeRj/" target="_blank"><i id="dos" class='bx bxl-facebook-circle' ></i></a>
+                        <a href="https://www.instagram.com/cosmeticos.bellass?igsh=MWo1ZGh0amg4Y2Ywag%3D%3D" target="_blank"><i id="cuatro" class='bx bxl-instagram' ></i></a>
                     </div>
                 </div>
             </div>
