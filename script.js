@@ -38,9 +38,28 @@ const productosAdicionales = [
 
 const productosContainer = document.getElementById('productos-container');
 const botonMostrar = document.getElementById('mostrar-productos');
+const menuCheckbox = document.getElementById('check');
+const menuLinks = document.querySelectorAll('.menus a');
 
 let productosMostrados = false;
 let productosDivs = [];
+
+// Función para cerrar el menú
+function closeMenu() {
+    menuCheckbox.checked = false;
+}
+
+// Agregar evento click a cada enlace del menú
+menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+function scrollToProductos() {
+    const menuSection = document.getElementById('Menu');
+    if (menuSection) {
+        menuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
 function mostrarProductos() {
     if (!productosMostrados) {
@@ -54,7 +73,7 @@ function mostrarProductos() {
                 </div>
                 <div class="texto__pagina3">
                     <p>${producto.nombre}</p>
-                    <p>${producto.descripcion}</p>
+                    ${producto.descripcion ? `<p>${producto.descripcion}</p>` : ''}
                     <p id="valor__pagina3">${producto.precio}</p>
                 </div>
             `;
@@ -71,6 +90,9 @@ function mostrarProductos() {
         
         botonMostrar.textContent = 'Ver todos los productos';
         productosMostrados = false;
+        
+        // Hacer scroll hacia arriba cuando se ocultan los productos
+        scrollToProductos();
     }
 }
 
